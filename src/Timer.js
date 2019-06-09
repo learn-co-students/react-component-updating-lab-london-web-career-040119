@@ -14,7 +14,11 @@ class Timer extends Component {
 
 
   //Your code here
-
+componentWillUpdate() {
+  //* this code changes the color of the text every second. we referenced when i declared a variable with React.create.Ref 
+  this.timer.current.style.color =
+  "#" + Math.floor(Math.random() * 16777215).toString(16);
+}
 
 
   componentDidMount() {
